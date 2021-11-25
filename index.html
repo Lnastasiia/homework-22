@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="./assets/css/bootstrap.css">
+
+    <!-- FA5 CSS -->
+	<link rel="stylesheet" href="./assets/fa/css/all.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="./assets/css/style.css">
+
+	<title>Индекс массы тела</title>
+
+	<script src="./assets/js/app.js"></script>
+	
+  </head>
+  <body>
+   
+	<div class="container mt-5">
+		
+		<h1 class="mb-4 text-center">Расчет индекса массы тела:</h1>
+	
+		<!-- Input Data Form -->
+		<div class='row row-cols-1 row-cols-lg-2 my-4'>
+			<div class="form-group">
+			  <label for="massInput">Ваш вес: (кг.)</label>
+			  <input oninput='imt()'
+			   type="number" class="form-control" id="massInput" 	min="10" max="400" value="56">
+			</div>
+
+			<div class="form-group">
+			  <label for="growthInput">Ваш рост: (м.)</label>
+			  <input oninput='imt()' type="number" class="form-control" id="growthInput" min="1" max="3" value="1.73">
+			</div> 
+
+		</div>
+		  
+		  <button onclick='imt()' class="btn btn-primary w-100">Рассчитать</button>
+		
+		<!-- /Input Data Form -->
+				
+		<h3 class='my-4'>Ваш индекс массы тела: <output id="resultPlace"></output> </h3>
+
+		<h5 class='my-4 text-success'> <output id="decryptionPlace"></output></h5>
+
+	</div>
+   
+  </body>
+</html>
